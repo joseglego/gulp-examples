@@ -118,13 +118,3 @@ gulp.task("rev:easy", function (argument) {
     .pipe(gulp.dest("./dist-easy"));
 });
 gulp.task('serve:easy', serve('./dist-easy'));
-
-//// Section 3.3: rev-easy
-gulp.task("rev:easy", function (argument) {
-  gulp.src("dist/index.html")
-    .pipe(reveasy())
-    .pipe(gulp.dest("./dist-easy"));
-});
-gulp.task('serve:easy', serve('./dist-easy'));
-
-
