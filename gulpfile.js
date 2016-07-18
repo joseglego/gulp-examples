@@ -27,6 +27,9 @@ var serve = require('gulp-serve');
 //// Section 0.7: LiveReload
 var browserSync = require('browser-sync').create();
 
+//// Section 0.8: RevAll
+var RevAll = require('gulp-rev-all');
+
 // Section 1: Build Tasks
 //// Section 1.0: Check HTML & Minify included HTML, CSS & JS
 gulp.task('useref', function(){
@@ -95,3 +98,16 @@ gulp.task('serve:dev', ['browserSync'], function (){
 
 //// Section 3.1: Build Serve
 gulp.task('serve:dist', serve('./dist'));
+
+//// Section 3.2: Rev-All
+gulp.task('rev:all', function () {
+    var revAll = new RevAll();
+    gulp.src('dist/**')
+        .pipe(revAll.revision())
+        .pipe(gulp.dest('dist-all'));
+
+});
+
+//// Section 3.1: Build Serve
+gulp.task('serve:all', serve('./dist-all'));
+

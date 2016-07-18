@@ -1,6 +1,6 @@
 .DS_Store
 .#*
 *#
-dist/
+dist*/
 bower_components/
 node_modules/
