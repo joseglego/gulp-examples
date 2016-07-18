@@ -1,0 +1,49 @@
+{
+  "name": "gulp-rev-example",
+  "description": "Testing multiples gulp-rev libs",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~1.0.0",
+    "bootstrap": "3.3.1",
+    "font-awesome": "~4.5.0",
+    "angular-datetime": "~2.1.0",
+    "angular-moment": "~0.10.3",
+    "moment": "~2.11.1",
+    "angular-loading-bar": "~0.8.0",
+    "angular-google-maps": "~2.3.2",
+    "ng-lodash": "0.4.0",
+    "simple-line-icons": "^2.2.4",
+    "angular-strap": "^2.3.8",
+    "angular-motion": "^0.4.4",
+    "angular-animate": "1.4.8",
+    "angular-confirm-modal": "^1.2.3",
+    "angular-google-chart": "~0.1.0",
+    "angular-datatables": "^0.5.4"
+  },
+  "authors": [
+    "@joseglego - Jose Lezama"
+  ],
+  "main": "app/app.js",
+  "keywords": [
+    "gulp",
+    "angularjs"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower_components"
+  ],
+  "resolutions": {
+    "angular": "1.4.8",
+    "moment": ">=2.8.0 <2.11.0",
+    "angular-animate": "1.4.8"
+  }
+}

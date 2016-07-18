@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Gulp Test</title>
+
+    <!-- build:css(.) assets/styles/vendor.css -->
+    <!-- BeginSection: BowerComponents -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.min.css">
+    <link rel="stylesheet" href="bower_components/angular-datatables/dist/css/angular-datatables.css">
+    <!-- EndSection: BowerComponents -->
+    <!-- endbuild -->
+    
+    <!--Begin: OwnCss -->
+    <!-- build:css(.) assets/styles/main.css -->
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- End: OwnCss -->
+    <!-- endbuild -->      
+  </head>
+  
+  <body ng-app="gulpExample">
+    <div ui-view></div>    
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- BeginSection: BowerComponents -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-datetime/dist/datetime.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.min.js"></script>
+    <script src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    <script src='bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+    <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+    <script src='bower_components/angular-google-chart/ng-google-chart.min.js'></script>
+    <script src='bower_components/ng-lodash/build/ng-lodash.min.js'></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script> 
+    <script src="bower_components/angular-confirm-modal/angular-confirm.min.js"></script> 
+    <script src="bower_components/angular-datatables/dist/angular-datatables.min.js"></script>
+    <script src="bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+    <!-- EndSection: BowerComponents -->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/main.js -->
+    <!-- BeginSection: CoreApp -->
+    <script src="app/app.js"></script>
+    <script src="app/routes.js"></script>
+    <script src="app/components/main.js"></script>
+    <!-- EndSection: Modules -->
+    <!-- endbuild -->
+  </body>
+</html>
