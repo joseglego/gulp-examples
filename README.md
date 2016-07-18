@@ -25,8 +25,8 @@ $ gulp serve:dist
 
 Added the documentation example task of [gulp-rev-all]. And test it. Results:
 - Good Output.
-- Index with hash (Not good)
-- App doesn't work.
+- Index with hash (Not good).
+- App doesn't work (Not good).
 
 You can test it:
 
@@ -36,5 +36,20 @@ $ gulp rev:all
 $ gulp serve:all
 ```
 
+### gulp-rev-easy
+
+Added the documentation example task of [gulp-rev-easy]. And test it. Results:
+- Index with hashed elements (Good).
+- Nothing else generated (Not good).
+- Doesn't find files (Not good). 
+
+You can test it:
+
+``` sh
+$ gulp build:dist
+$ gulp rev:easy
+$ gulp serve:easy 
+```
 
 [gulp-rev-all]: <https://github.com/smysnk/gulp-rev-all>
+[gulp-rev-easy]: <https://github.com/timtian/gulp-rev-easy>
