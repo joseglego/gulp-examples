@@ -33,6 +33,9 @@ var RevAll = require('gulp-rev-all');
 //// Section 0.9: rev-easy
 var reveasy = require("gulp-rev-easy");
 
+//// Section 0.10: rev-replace
+var rev = require('gulp-rev');
+
 // Section 1: Build Tasks
 //// Section 1.0: Check HTML & Minify included HTML, CSS & JS
 gulp.task('useref', function(){
@@ -118,3 +121,13 @@ gulp.task("rev:easy", function (argument) {
     .pipe(gulp.dest("./dist-easy"));
 });
 gulp.task('serve:easy', serve('./dist-easy'));
+
+//// Section 3.3: rev-plain
+gulp.task('rev:plain', function () {
+  return gulp.src('dist/**/*')
+    .pipe(rev())
+    .pipe(gulp.dest('dist-plain'))
+    .pipe(rev.manifest())
+    .pipe(gulp.dest('dist-plain')); 
+});
+gulp.task('serve:plain', serve('./dist-plain'));

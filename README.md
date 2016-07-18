@@ -21,6 +21,21 @@ $ gulp serve:dist
 ```
 
 ## Rev(s)
+### gulp-rev (Just gulp-rev. Plain)
+
+Added the documentation example task of [gulp-rev]. And test it. Results:
+- Good Output.
+- Index with hash (Not good).
+- App doesn't work (Not good).
+
+You can test it:
+
+``` sh
+$ gulp build:dist
+$ gulp rev:plain
+$ gulp serve:plain
+```
+
 ### gulp-rev-all
 
 Added the documentation example task of [gulp-rev-all]. And test it. Results:
