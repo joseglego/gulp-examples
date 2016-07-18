@@ -33,8 +33,12 @@ var RevAll = require('gulp-rev-all');
 //// Section 0.9: rev-easy
 var reveasy = require("gulp-rev-easy");
 
-//// Section 0.10: rev-replace
+//// Section 0.10: rev
 var rev = require('gulp-rev');
+
+//// Section 0.11: rev-replace
+var filter = require('gulp-filter');
+var revReplace = require('gulp-rev-replace');
 
 // Section 1: Build Tasks
 //// Section 1.0: Check HTML & Minify included HTML, CSS & JS
@@ -122,7 +126,7 @@ gulp.task("rev:easy", function (argument) {
 });
 gulp.task('serve:easy', serve('./dist-easy'));
 
-//// Section 3.3: rev-plain
+//// Section 3.4: rev-plain
 gulp.task('rev:plain', function () {
   return gulp.src('dist/**/*')
     .pipe(rev())
@@ -131,3 +135,25 @@ gulp.task('rev:plain', function () {
     .pipe(gulp.dest('dist-plain')); 
 });
 gulp.task('serve:plain', serve('./dist-plain'));
+
+//// Section 3.5: rev-replace
+gulp.task('rev:replace', function () {
+  var jsFilter = filter("app/**/*.js", { restore: true });
+  var cssFilter = filter("assets/**/*.css", { restore: true });
+  var indexHtmlFilter = filter(['**/*', '!./index.html'], { restore: true });
+
+  return gulp.src("index.html")
+    .pipe(useref())      
+    .pipe(jsFilter)
+    .pipe(uglify())      
+    .pipe(jsFilter.restore)
+    .pipe(cssFilter)
+    .pipe(csso())        
+    .pipe(cssFilter.restore)
+    .pipe(indexHtmlFilter)
+    .pipe(rev())         
+    .pipe(indexHtmlFilter.restore)
+    .pipe(revReplace())  
+    .pipe(gulp.dest('dist-replace'));
+});
+gulp.task('serve:replace', serve('./dist-replace'));
